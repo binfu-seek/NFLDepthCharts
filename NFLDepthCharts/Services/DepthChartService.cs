@@ -192,7 +192,7 @@ namespace NFLDepthCharts.Services
             {
                 throw new Exception($"Position '{position}' does not exist in the depth chart.");
             }
-            var positionPlayers = _depthChart[position.Trim().ToUpper()];
+            var positionPlayers = _depthChart[position];
             if (positionPlayers.Count == _maxDepth)
             {
                 throw new Exception($"Cannot add player to position '{position}' because it has reached the maximum depth of {_maxDepth}.");
